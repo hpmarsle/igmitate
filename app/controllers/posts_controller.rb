@@ -7,6 +7,7 @@ class PostsController < ApplicationController
         @post = Post.new
         @post.caption = params[:caption]
         @post.save
+        redirect_to posts_url
     end
 
     def index
