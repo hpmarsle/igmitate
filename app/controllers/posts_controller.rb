@@ -11,7 +11,17 @@ class PostsController < ApplicationController
     end
 
     def index
-        @posts = Post.all
+        # if index is nested show only current_users posts
+        if params[:user_id]
+            @user = User.find_by(id: params[:user_id])
+            if @user.nil?
+              redirect_to posts_path, alert: "Account not found"
+            else
+              @posts = @user.posts
+            end
+        else
+            @posts = Post.all
+        end
     end
 
     def show
