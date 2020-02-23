@@ -4,14 +4,14 @@ class PostsController < ApplicationController
     end
 
     def create
-        @post = Post.new
-        @post.caption = params[:caption]
+        # byebug
+        @post = current_user.posts.build(post_params)
         @post.save
-        redirect_to posts_url
+        redirect_to posts_path
     end
 
     def index
-        # if index is nested show only current_users posts
+        # if index is user nested show only current_users posts
         if params[:user_id]
             @user = User.find_by(id: params[:user_id])
             if @user.nil?
@@ -19,6 +19,7 @@ class PostsController < ApplicationController
             else
               @posts = @user.posts
             end
+        #otherwise show all posts from all users
         else
             @posts = Post.all
         end
@@ -37,4 +38,11 @@ class PostsController < ApplicationController
 
     def destroy
     end
+
+    private
+
+    def post_params
+        params.require(:post).permit(:caption,:user_id)
+    end
+
 end
