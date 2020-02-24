@@ -1,5 +1,11 @@
-<ul>
+
 <% @posts.each do |p| %>
-   <li><%=  p.caption %></li>
+   <div>
+        <p><%= p.user.username %><br>
+        <%= p.caption %>
+        <% if p.user_id == current_user.id %>
+            <a href="<%=edit_user_post_path(p.id,p.user_id)%>">Edit</a>
+        <% end %>
+        </p>
+   </div>
 <% end %>
-</ul>
