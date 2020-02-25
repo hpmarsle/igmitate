@@ -1,0 +1,10 @@
+<%= form_for @post do |f| %>
+    <%= f.hidden_field :user_id %>
+    <%= f.label :caption %>
+    <%= f.text_field :caption %><br>
+    <%= f.fields_for :hashtag, @post.build_hashtag do |hashtag_fields| %>
+        <%= f.label :hashtag %>
+        <%= hashtag_fields.text_field :name %>
+    <% end %><br>
+    <%= f.submit %>
+<% end %>
