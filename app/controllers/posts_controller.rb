@@ -1,6 +1,15 @@
 class PostsController < ApplicationController
     def new
-        @post = Post.new
+        if params[:user_id] 
+            @user = User.find_by(id: params[:user_id])
+            if @user == current_user
+                @post = Post.new
+            else
+                redirect_to new_post_path, alert: "You cannot create posts for other accounts"
+            end
+        else
+            @post = Post.new
+        end
     end
     
     def create
