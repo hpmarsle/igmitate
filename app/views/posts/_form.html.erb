@@ -1,5 +1,5 @@
 <%= form_for @post do |f| %>
-    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.label :caption %>
     <%= f.text_field :caption %><br>
     <%= f.fields_for :hashtag, @post.build_hashtag do |hashtag_fields| %>
