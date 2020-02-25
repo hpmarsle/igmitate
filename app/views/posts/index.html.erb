@@ -1,11 +1,12 @@
 
 <% @posts.each do |p| %>
    <div>
-        <p><%= p.user.username %><br>
+        <%= link_to p.user.username, user_posts_path(p.user) %><br>
         <%= p.caption %><br>
         <% if p.hashtag %>
-            <%= p.hashtag.name %><br>
+            #<%= p.hashtag.name %><br>
         <% end %>
+        <%= link_to "Show", post_path(p) %>
         <% if p.user_id == current_user.id %>
             <a href="<%=edit_user_post_path(p.id,p.user_id)%>">Edit</a>
         <% end %>
