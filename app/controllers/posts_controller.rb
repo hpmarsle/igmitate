@@ -40,7 +40,6 @@ class PostsController < ApplicationController
     end
 
     def edit
-        
         if params[:user_id]
             @user = User.find_by(id: params[:user_id])
             if @user != current_user
@@ -75,7 +74,7 @@ class PostsController < ApplicationController
     private
 
     def post_params
-        params.require(:post).permit(:caption,:user_id)
+        params.require(:post).permit(:caption,:user_id, hashtag_attributes: [:name])
     end
 
 end

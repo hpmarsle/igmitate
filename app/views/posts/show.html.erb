@@ -1,1 +1,3 @@
-<p><%= @post.caption %></p>
+<p>Caption: <%= @post.caption %></p>
+<p>Username: <%= @post.user.username %></p>
+<p>Hashtag: <%= @post.hashtag.name if @post.hashtag %></p>
