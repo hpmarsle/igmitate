@@ -3,7 +3,7 @@ class PostsController < ApplicationController
         if params[:user_id] 
             @user = User.find_by(id: params[:user_id])
             if @user == current_user
-                @post = Post.new
+                @post = Post.new               
             else
                 redirect_to new_post_path, alert: "You cannot create posts for other accounts"
             end
@@ -83,7 +83,7 @@ class PostsController < ApplicationController
     private
 
     def post_params
-        params.require(:post).permit(:caption,:user_id, hashtag_attributes: [:name])
+        params.require(:post).permit(:caption,:user_id, hashtag_ids: [], hashtag_attributes: [:name])
     end
 
 end
