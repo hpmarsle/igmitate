@@ -8,17 +8,20 @@ Specs:
 - [ ] Include at least one many-to-many relationship (HashTag has_many Users, through Posts; User has_many HashTags through Posts)
 - [ ] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (post.caption)
 - [ ] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
-- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. Post.most_popular_hashtag URL: /posts/hashtag_stats)
-- [ ] Include signup (how e.g. Devise)
-- [ ] Include login (how e.g. Devise)
-- [ ] Include logout (how e.g. Devise)
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes)
-- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
-
+- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. Post.most_popular_hashtag URL: /posts/hashtag_stats)******* WORK ON THIS TUESDAY
+- [x] Include signup (how e.g. Devise)
+- [x] Include login (how e.g. Devise)
+- [x] Include logout (how e.g. Devise)
+- [ ] Include third party signup/login (how e.g. Devise/OmniAuth) ************* WORK ON THIS TUESDAY
+- [x] Include nested resource show or index (URL e.g. users/2/posts)
+- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) ************* WORK ON THIS TUESDAY 
+- [ ] Include form display of validation errors (form URL e.g. /recipes/new) ************* WORK ON THIS TUESDAY
+            **********REFACTOR WEDNESDAY*****************
 Confirm:
 - [ ] The application is pretty DRY
 - [ ] Limited logic in controllers
 - [ ] Views use helper methods if appropriate
 - [ ] Views use partials if appropriate
+
+add back button to show page
+detail current bugs
