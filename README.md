@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+special thanks to edutechional
+https://youtu.be/VeUX3pWn28w
+Jake
+Gretchen
