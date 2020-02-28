@@ -9,6 +9,7 @@ class PostsController < ApplicationController
             end
         else
             @post = Post.new
+            @hashtag = @post.build_hashtag
         end
     end
     
@@ -24,8 +25,15 @@ class PostsController < ApplicationController
             end
         else 
             @post = current_user.posts.build(post_params)
-            @post.save
-            redirect_to posts_path
+            # @post = Post.new(post_params)
+ 
+            if @post.save
+                redirect_to posts_path
+            else
+                render :new
+            end
+            
+            # redirect_to posts_path
         end
     end
 

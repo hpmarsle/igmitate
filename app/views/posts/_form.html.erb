@@ -2,7 +2,7 @@
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= f.label :caption %>:
     <%= f.text_field :caption %><br>
-    <%= f.fields_for :hashtag, @post.build_hashtag do |hashtag_builder| %>
+    <%= f.fields_for :hashtag, @hashtag do |hashtag_builder| %>
         Hashtag: <%= hashtag_builder.text_field :name %>
     <% end %><br>
     <%= f.submit %>
