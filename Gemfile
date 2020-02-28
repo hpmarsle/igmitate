@@ -7,7 +7,6 @@ gem 'bootstrap', '~> 4.4', '>= 4.4.1'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'omniauth-facebook'
-gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record

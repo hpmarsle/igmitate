@@ -12,11 +12,11 @@ Specs:
 - [x] Include signup (how e.g. Devise)
 - [x] Include login (how e.g. Devise)
 - [x] Include logout (how e.g. Devise)
-- [x] Include third party signup/login (how e.g. Devise/OmniAuth) ***works but no username
+- [ ] Include third party signup/login (how e.g. Devise/OmniAuth) ************* WORK ON WED AM
 - [x] Include nested resource show or index (URL e.g. users/2/posts)
 - [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new) 
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new) ************* WORK ON WED
-            **********REFACTOR THU*****************
+            **********REFACTOR WEDNESDAY*****************
 Confirm:
 - [ ] The application is pretty DRY
 - [ ] Limited logic in controllers
@@ -24,15 +24,12 @@ Confirm:
 - [ ] Views use partials if appropriate
 
 TO DO NOTES:
-hashtag doesn't work when i do one that already exists
-omniauth - fb does not username so how to make email username also? need to edit view?
-^do i need to set up a custom controller?
+omniauth
 form display of validation errors
 class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. Post.most_popular_hashtag URL: /posts/hashtag_stats)
 add back button to show page
 don't build blank hashtag and connect nil name to post**need to reset db
 readme
-
 detail current bugs:
 
 Later features:
