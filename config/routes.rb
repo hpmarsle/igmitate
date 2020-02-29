@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  get '/posts/hashtag_stats' #need to make view? posts/hashtag_stats.html.erb
+  get '/posts/hashtag_stats'
   
   root to: 'posts#index'
   resources :users do 
