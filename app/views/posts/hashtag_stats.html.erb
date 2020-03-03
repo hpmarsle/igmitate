@@ -1,1 +1,8 @@
 <h1>Hashtag Stats</h1>
+
+<h3>Hashtag Contributions by User:</h3>
+<ul>
+<%Post.hash_tagged.group(:user_id).each do |post|%>
+    <li><%=post.post_user%> - <%=post.user.hashtags.count%> hashtags </li>
+<%end%>
+</ul>

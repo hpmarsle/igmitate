@@ -25,8 +25,6 @@ class PostsController < ApplicationController
             end
         else 
             @post = current_user.posts.build(post_params)
-            # @post = Post.new(post_params)
- 
             if @post.save
                 redirect_to posts_path
             else
@@ -86,6 +84,11 @@ class PostsController < ApplicationController
     end
 
     def destroy
+        @post = Post.find(params[:id]).destroy
+        redirect_to posts_url
+    end
+
+    def hashtag_stats
     end
 
     private

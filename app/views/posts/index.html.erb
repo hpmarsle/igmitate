@@ -9,6 +9,7 @@
         <%= link_to "Show", post_path(p) %>
         <% if p.user_id == current_user.id %>
             <a href="<%=edit_user_post_path(p.user_id, p.id)%>">Edit</a>
+            <%= button_to "Delete Post", post_path(p), method: :delete %>
         <% end %>
         </p>
    </div>
